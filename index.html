@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expediente Confidencial: Caso Nosotros ❤️</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!-- DECORACIÓN ANIMADA -->
+    <div id="decoracion"></div>
+
+    <!-- =========================
+         PANTALLA DE INICIO
+    ========================== -->
+
+    <section id="inicio" class="pantalla activa">
+
+        <div class="sobre-decorativo">
+            💌
+        </div>
+
+        <div class="sello">
+            CONFIDENCIAL
+        </div>
+
+        <p class="clasificacion">⚠ ARCHIVO CLASIFICADO ⚠</p>
+
+        <h1>EXPEDIENTE<br>CONFIDENCIAL</h1>
+
+        <h2>CASO: NOSOTROS ❤️</h2>
+
+        <div class="linea"></div>
+
+        <p class="intro">
+            Este archivo contiene información<br>
+            altamente confidencial.
+        </p>
+
+        <p class="advertencia">
+            Si alguien pregunta, oficialmente<br>
+            nos conocimos en su escuela. 🤫
+        </p>
+
+        <p class="mini">
+            Lo demás queda entre nosotros.
+        </p>
+
+        <button onclick="comenzarExpediente()">
+            🔐 ABRIR EXPEDIENTE
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         NOMBRE
+    ========================== -->
+
+    <section id="nombre" class="pantalla">
+
+        <div class="documento">
+
+            <span class="numero">ARCHIVO #000</span>
+
+            <h2>👤 IDENTIFICACIÓN DEL SOSPECHOSO</h2>
+
+            <p>
+                Antes de continuar necesitamos confirmar
+                la identidad de la persona involucrada.
+            </p>
+
+            <input
+                type="text"
+                id="nombreUsuario"
+                placeholder="Escribe tu nombre..."
+                autocomplete="off"
+            >
+
+            <button onclick="guardarNombre()">
+                CONTINUAR ➜
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SEGURIDAD
+    ========================== -->
+
+    <section id="seguridad" class="pantalla">
+
+        <div class="documento">
+
+            <span class="numero">NIVEL DE SEGURIDAD</span>
+
+            <h2>🔐 PREGUNTA DE SEGURIDAD</h2>
+
+            <p>
+                Para comprobar que realmente eres tú...
+            </p>
+
+            <h3>¿Cómo te dice tu mamá?</h3>
+
+            <input
+                type="text"
+                id="respuestaSeguridad"
+                placeholder="Pista: 🥁"
+                autocomplete="off"
+            >
+
+            <button onclick="verificarSeguridad()">
+                VERIFICAR
+            </button>
+
+            <p id="resultadoSeguridad"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HISTORIA
+    ========================== -->
+
+    <section id="contenido" class="pantalla">
+
+        <div id="historia" class="documento"></div>
+
+    </section>
+
+
+    <!-- =========================
+         CARTA
+    ========================== -->
+
+    <section id="carta" class="pantalla">
+
+        <div class="carta-pantalla">
+
+            <p class="archivo-carta">
+                📁 CARTA_PARA_TAMBOR.txt
+            </p>
+
+            <p class="estado">
+                🔒 ARCHIVO BLOQUEADO
+            </p>
+
+            <p class="pregunta-carta">
+                💭 ¿Por qué crees que ella se enamoró de ti?
+            </p>
+
+            <textarea
+                id="respuestaCarta"
+                placeholder="Escribe lo que creas..."
+            ></textarea>
+
+            <button onclick="abrirSobre()">
+                💌 ENVIAR RESPUESTA
+            </button>
+
+
+            <!-- SOBRE -->
+
+            <div id="escenaSobre" class="escena-sobre oculto">
+
+                <p class="instruccion">
+                    Tu respuesta ha sido registrada...
+                </p>
+
+                <div
+                    class="sobre"
+                    onclick="abrirCartaFinal()"
+                >
+
+                    <div class="sobre-cuerpo"></div>
+
+                    <div class="solapa"></div>
+
+                    <div class="papel">
+                        <span>💌</span>
+                    </div>
+
+                    <div class="sello-cera">
+                        ❤️
+                    </div>
+
+                </div>
+
+                <p class="abrir-texto">
+                    Toca el sobre para abrirlo
+                </p>
+
+            </div>
+
+
+            <!-- CARTA ABIERTA -->
+
+            <div id="cartaFinal" class="carta-final oculto">
+
+                <div class="papel-carta">
+
+                    <div class="adorno-carta">
+                        ✦ ❤️ ✦
+                    </div>
+
+                    <h2>Para Tambor ❤️</h2>
+
+                    <p>
+                        La verdad es que contigo me siento muy feliz.
+                    </p>
+
+                    <p>
+                        Hemos pasado por muchas cosas en este año y seis meses.
+                        Algunas han sido bonitas y otras no tanto, pero creo que
+                        al final lo importante es que seguimos aquí, juntos.
+                    </p>
+
+                    <p>
+                        Hemos aprendido de nuestros errores, hemos buscado
+                        mejorar y seguir creciendo, no solo por nosotros mismos,
+                        sino también por nuestra relación.
+                    </p>
+
+                    <p>
+                        Y creo que una de las cosas más lindas es simplemente
+                        tenerte a mi lado.
+                    </p>
+
+                    <p>
+                        Me encanta poder compartir mis días contigo, hacer
+                        tonterías, molestarnos, reírnos y simplemente estar juntos.
+                    </p>
+
+                    <p>
+                        Sé que tal vez no siempre digo cuánto te amo, y quizá
+                        tampoco soy la mejor demostrando lo que siento, pero
+                        de verdad me encanta pasar tiempo contigo.
+                    </p>
+
+                    <p>
+                        Me pone nerviosa pensar en todo lo que nos pueda deparar
+                        el futuro, porque no sé exactamente qué va a pasar ni qué
+                        cosas nos tocará vivir.
+                    </p>
+
+                    <p>
+                        Pero hay algo de lo que sí estoy segura:
+                    </p>
+
+                    <p class="frase-especial">
+                        Quiero que seas tú.
+                    </p>
+
+                    <p>
+                        Quiero seguir viviendo cosas contigo, seguir aprendiendo
+                        contigo, seguir mejorando contigo y seguir haciendo
+                        recuerdos que algún día podamos recordar y decir:
+                    </p>
+
+                    <p class="frase-recuerdo">
+                        "¿Te acuerdas cuando...?"
+                    </p>
+
+                    <p>
+                        Y aunque no sé cuánto nos quede por vivir, sí sé que
+                        quiero pasar lo que me quede de vida contigo.
+                    </p>
+
+                    <p class="te-amo">
+                        Te amo muchísimo, Tambor. ❤️
+                    </p>
+
+                    <p>
+                        Gracias por quedarte, por seguirme en mis locuras
+                        y por ser tú.
+                    </p>
+
+                    <p class="fecha-carta">
+                        23 de septiembre de 2026
+                    </p>
+
+                    <div class="adorno-carta">
+                        ❤️ ✦ ❤️
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CRÉDITOS
+    ========================== -->
+
+    <section id="creditos" class="pantalla-creditos">
+
+        <div class="creditos-contenedor">
+
+            <div class="creditos-roll">
+
+                <p class="fin">❤️ FIN ❤️</p>
+
+                <p>EXPEDIENTE CONFIDENCIAL</p>
+
+                <p>CASO: NOSOTROS</p>
+
+                <br>
+
+                <p>PROTAGONISTAS</p>
+
+                <h2>TAMBOR</h2>
+                <h2>YO</h2>
+
+                <br>
+
+                <p>DIRECCIÓN</p>
+                <h2>NOSOTROS</h2>
+
+                <br>
+
+                <p>GUION</p>
+                <h2>NUESTRA HISTORIA</h2>
+
+                <br>
+
+                <p>PRODUCCIÓN</p>
+
+                <h2>
+                    TODOS LOS MOMENTOS<br>
+                    QUE HEMOS VIVIDO
+                </h2>
+
+                <br>
+
+                <p>DURACIÓN</p>
+
+                <h2>
+                    577 DÍAS...<br>
+                    Y CONTANDO ❤️
+                </h2>
+
+                <br>
+
+                <p>EFECTOS ESPECIALES</p>
+
+                <h2>
+                    DRAMA<br>
+                    RISAS<br>
+                    CHISMES<br>
+                    TONTERÍAS
+                </h2>
+
+                <br>
+
+                <p>AGRADECIMIENTOS</p>
+
+                <h2>
+                    GRACIAS POR SER<br>
+                    PARTE DE MI HISTORIA.
+                </h2>
+
+                <br>
+
+                <p class="gran-final">
+                    ❤️
+                </p>
+
+                <p class="gran-final">
+                    FIN DEL EXPEDIENTE...
+                </p>
+
+                <p class="gran-final">
+                    ...POR AHORA.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="juego.js"></script>
+
+</body>
+</html>
